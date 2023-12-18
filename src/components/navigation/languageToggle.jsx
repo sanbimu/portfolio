@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { cn } from "@/utils/cn";
 
 export function LanguageToggle({ currentLanguage }) {
   const pathname = usePathname();
@@ -35,11 +36,12 @@ export function LanguageToggle({ currentLanguage }) {
         onClick={toggleLanguage}
       >
         <div
-          className={`absolute left-0 right-0 bg-brown w-[10px] h-[10px] rounded-full transition-all duration-300 ${
+          className={cn(
+            "absolute left-0 right-0 bg-brown w-[10px] h-[10px] rounded-full transition-all duration-300",
             isFrench
               ? "transform translate-x-[0.35rem]"
               : "transform translate-x-6"
-          }`}
+          )}
         ></div>
       </div>
       <p
