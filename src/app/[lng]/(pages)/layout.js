@@ -1,10 +1,10 @@
-import { useTranslation } from "../../../i18n";
+import { useTranslations } from "next-intl";
 import { navLinks } from "@/constants/navLinks";
 import { NavLink } from "@/components/navigation/navLink";
 import { LanguageToggle } from "@/components/navigation/languageToggle";
 
-export default async function Layout({ children, params: { lng } }) {
-  const { t } = await useTranslation(lng);
+export default function Layout({ children, params: { lng } }) {
+  const t = useTranslations();
 
   return (
     <>

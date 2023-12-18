@@ -1,8 +1,8 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useTranslation } from "../../i18n";
 
-export default async function Home({ params: { lng } }) {
-  const { t } = await useTranslation(lng);
+export default function Home({ params: { lng } }) {
+  const t = useTranslations();
   return (
     <>
       <div className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex">

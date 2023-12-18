@@ -1,8 +1,7 @@
 import { Nanum_Myeongjo, Old_Standard_TT } from "next/font/google";
 import localFont from "next/font/local";
 import "../globals.css";
-import { dir } from "i18next";
-import { languages } from "../../i18n/settings";
+import { NextIntlClientProvider } from "next-intl";
 
 const myriad = localFont({
   src: [
@@ -56,17 +55,17 @@ export const metadata = {
   description: "Sanbimu's homepage",
 };
 
-export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }));
-}
+export default async function RootLayout({ children, params: { lng } }) {
+  const messages = (await import(`../../i18n/locales/${lng}.json`)).default;
 
-export default function RootLayout({ children, params: { lng } }) {
   return (
-    <html lang={lng} dir={dir(lng)}>
+    <html lang={lng}>
       <body
         className={`${myriad.variable} ${monkeg.variable} ${nanum.variable} ${old.variable}`}
       >
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

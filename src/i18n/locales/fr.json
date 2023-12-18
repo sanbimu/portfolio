@@ -1,6 +1,8 @@
 {
-  "nav.home": "accueil",
-  "nav.about": "a propos",
-  "nav.contact": "contact",
-  "nav.cv": "curriculum vitae"
+  "nav": {
+    "home": "accueil",
+    "about": "a propos",
+    "contact": "contact",
+    "cv": "curriculum vitae"
+  }
 }

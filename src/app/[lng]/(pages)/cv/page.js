@@ -1,6 +1,6 @@
-import { useTranslation } from "../../../../i18n";
+import { useTranslations } from "next-intl";
 
-export default async function Curriculum({ params: { lng } }) {
-  const { t } = await useTranslation(lng);
+export default function Curriculum({ params: { lng } }) {
+  const t = useTranslations();
   return <div className="bg-background w-screen h-screen "> hello</div>;
 }
