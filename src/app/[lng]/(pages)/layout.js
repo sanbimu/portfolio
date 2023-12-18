@@ -1,13 +1,15 @@
 import { useTranslation } from "../../../i18n";
 import { navLinks } from "@/constants/navLinks";
 import { NavLink } from "@/components/navigation/navLink";
+import { LanguageToggle } from "@/components/navigation/languageToggle";
 
 export default async function Layout({ children, params: { lng } }) {
   const { t } = await useTranslation(lng);
 
   return (
     <>
-      <div className="flex bg-background w-screen h-[120px] items-center justify-center fixed top-0 z-[100]">
+      <div className="flex bg-background w-screen h-[120px] items-center justify-between fixed top-0 z-[100]">
+        <div className="flex px-20 font-monkeg text-5xl text-brown">N</div>
         <div className="flex px-20 font-nanum text-lg gap-16 justify-center">
           {navLinks.map((link, index) => {
             return (
@@ -18,6 +20,9 @@ export default async function Layout({ children, params: { lng } }) {
               />
             );
           })}
+        </div>
+        <div className="flex px-20 font-old text-brown text-lg gap-4 items-center justify-center">
+          <LanguageToggle currentLanguage={lng} />
         </div>
       </div>
       {children}
