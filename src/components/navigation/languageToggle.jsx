@@ -17,7 +17,10 @@ export function LanguageToggle({ currentLanguage }) {
         français
       </p>
       <Link
-        className="relative flex w-[40px] h-[15px] border-[0.5px] border-brown rounded-[50px] items-center cursor-pointer"
+        className={cn(
+          "relative flex w-[50px] h-[20px] border-[0.5px] border-brown rounded-[50px] items-center cursor-pointer",
+          "lg:w-[40px] lg:h-[15px]"
+        )}
         onClick={toggleLanguage}
         href={pathname}
         locale={isFrench ? "en" : "fr"}
@@ -25,11 +28,12 @@ export function LanguageToggle({ currentLanguage }) {
       >
         <div
           className={cn(
-            "absolute left-0 right-0 bg-brown w-[10px] h-[10px] rounded-full",
+            "absolute left-0 right-0 bg-brown w-[13px] h-[13px] rounded-full",
+            "lg:w-[10px] lg:h-[10px]",
             // "transition-all duration-300",
             isFrench
               ? "transform translate-x-[0.35rem]"
-              : "transform translate-x-6"
+              : "transform lg:translate-x-6 translate-x-[30px]"
           )}
         />
       </Link>

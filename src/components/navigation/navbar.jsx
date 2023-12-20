@@ -2,6 +2,7 @@
 import { cn } from "@/utils/cn";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
+import { useState } from "react";
 import { navLinks } from "@/constants/navLinks";
 import { NavLink } from "./navLink";
 import { LanguageToggle } from "./languageToggle";
@@ -11,6 +12,9 @@ export default function Navbar() {
   const t = useTranslations();
   const { lng } = useParams();
   const isMobile = useIsMobile();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobileMenuOpen = isMobile && isMenuOpen;
+  const toggleMenu = () => setIsMenuOpen((isMenuOpen) => !isMenuOpen);
 
   return (
     <>
@@ -30,28 +34,46 @@ export default function Navbar() {
         </div>
         {isMobile && (
           <div className="px-12 font-nanum text-lg text-brown">
-            <button>
+            <button onClick={toggleMenu}>
               menu<span className="text-sm pl-2">▼</span>
             </button>
           </div>
         )}
-        {!isMobile && (
-          <>
-            <div className="flex px-20 font-nanum text-lg gap-16 justify-center">
+
+        {(!isMobile || isMobileMenuOpen) && (
+          <div
+            className={cn(
+              isMobileMenuOpen &&
+                "absolute w-full h-screen inset-0 backdrop-filter backdrop-blur-sm mt-[80px]"
+            )}
+          >
+            <div
+              className={cn(
+                "flex font-nanum",
+                "lg:text-lg lg:gap-16 lg:justify-center",
+                isMobile && "flex-col mt-[120px] ml-20 text-2xl gap-6"
+              )}
+            >
               {navLinks.map((link, index) => {
                 return (
                   <NavLink
-                    href={`/${lng}/${link.path}`}
+                    href={link.path}
                     key={index}
                     text={t("nav." + link.key)}
                   />
                 );
               })}
+              <div
+                className={cn(
+                  "flex gap-4 font-old text-brown items-center",
+                  "lg:pr-20 lg:pl-48 lg:text-lg lg:justify-center",
+                  isMobile && "text-2xl pt-10"
+                )}
+              >
+                <LanguageToggle currentLanguage={lng} />
+              </div>
             </div>
-            <div className="flex px-20 font-old text-brown text-lg gap-4 items-center justify-center">
-              <LanguageToggle currentLanguage={lng} />
-            </div>
-          </>
+          </div>
         )}
       </div>
     </>

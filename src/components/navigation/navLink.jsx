@@ -1,11 +1,11 @@
 "use client";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { cn } from "@/utils/cn";
+import { Link } from "@/utils/navigation";
 
 export function NavLink({ href, text }) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname.endsWith(href);
   return (
     <Link
       className={cn(isActive ? "drop-shadow-active" : "hover:text-rust")}
