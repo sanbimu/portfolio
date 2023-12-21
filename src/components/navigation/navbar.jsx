@@ -33,11 +33,21 @@ export default function Navbar() {
           N
         </div>
         {isMobile && (
-          <div className="px-12 font-nanum text-lg text-brown">
-            <button onClick={toggleMenu}>
-              menu<span className="text-sm pl-2">▼</span>
-            </button>
-          </div>
+          <button
+            onClick={toggleMenu}
+            className="flex items-center gap-2 px-12 font-nanum text-2xl text-brown"
+          >
+            <span>menu</span>
+            <div className="mt-[4px]">
+              <svg
+                width="14"
+                height="14"
+                className={isMenuOpen && "transform rotate-180"}
+              >
+                <polygon points="1,12.12 7,1 13,12.12" fill="#72695a" />
+              </svg>
+            </div>
+          </button>
         )}
 
         {(!isMobile || isMobileMenuOpen) && (
@@ -51,23 +61,32 @@ export default function Navbar() {
               className={cn(
                 "flex font-nanum",
                 "lg:text-lg lg:gap-16 lg:justify-center",
-                isMobile && "flex-col mt-[120px] ml-20 text-2xl gap-6"
+                isMobile && "flex-col gap-12 mt-[120px] mx-8 text-2xl "
               )}
             >
-              {navLinks.map((link, index) => {
-                return (
-                  <NavLink
-                    href={link.path}
-                    key={index}
-                    text={t("nav." + link.key)}
-                  />
-                );
-              })}
+              <div
+                className={
+                  isMobile &&
+                  "flex flex-col gap-6 p-8 border-[0.5px] border-brown rounded-bl-[50px]"
+                }
+              >
+                {navLinks.map((link, index) => {
+                  return (
+                    <NavLink
+                      href={link.path}
+                      key={index}
+                      text={t("nav." + link.key)}
+                      onClick={toggleMenu}
+                    />
+                  );
+                })}
+              </div>
               <div
                 className={cn(
                   "flex gap-4 font-old text-brown items-center",
                   "lg:pr-20 lg:pl-48 lg:text-lg lg:justify-center",
-                  isMobile && "text-2xl pt-10"
+                  isMobile &&
+                    "text-2xl py-10 px-8 border-[0.5px] border-brown rounded-tr-[50px]"
                 )}
               >
                 <LanguageToggle currentLanguage={lng} />

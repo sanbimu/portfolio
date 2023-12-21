@@ -1,0 +1,5 @@
+<!-- <svg viewBox="0 0 46 40.001" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 46 40.001"><path d="M46 .004 0 0l23.002 40.001z" fill="#72695a" class="fill-000000"></path></svg> -->
+
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="0,20 12,0 24,20" fill="#72695a" />
+</svg>
