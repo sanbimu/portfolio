@@ -4,5 +4,13 @@
     "about": "about",
     "contact": "contact",
     "cv": "curriculum vitae"
+  },
+  "cv": {
+    "Experience": "Experience",
+    "Education": "Education",
+    "Skills": "Skills",
+    "Languages": "Languages",
+    "Strengths": "Strengths",
+    "Interests": "Interests"
   }
 }

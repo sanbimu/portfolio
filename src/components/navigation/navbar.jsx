@@ -42,7 +42,7 @@ export default function Navbar() {
               <svg
                 width="14"
                 height="14"
-                className={isMenuOpen && "transform rotate-180"}
+                className={!isMenuOpen && "transform rotate-180"}
               >
                 <polygon points="1,12.12 7,1 13,12.12" fill="#72695a" />
               </svg>
@@ -60,15 +60,16 @@ export default function Navbar() {
             <div
               className={cn(
                 "flex font-nanum",
-                "lg:text-lg lg:gap-16 lg:justify-center",
+                "lg:text-lg",
                 isMobile && "flex-col gap-12 mt-[120px] mx-8 text-2xl "
               )}
             >
               <div
-                className={
+                className={cn(
+                  "flex lg:gap-16",
                   isMobile &&
-                  "flex flex-col gap-6 p-8 border-[0.5px] border-brown rounded-bl-[50px]"
-                }
+                    "flex-col gap-6 p-8 border-[0.5px] border-brown rounded-bl-[50px]"
+                )}
               >
                 {navLinks.map((link, index) => {
                   return (
@@ -84,7 +85,7 @@ export default function Navbar() {
               <div
                 className={cn(
                   "flex gap-4 font-old text-brown items-center",
-                  "lg:pr-20 lg:pl-48 lg:text-lg lg:justify-center",
+                  "lg:pr-20 lg:pl-[270px] lg:text-lg lg:justify-center lg:pt-[1.2px]",
                   isMobile &&
                     "text-2xl py-10 px-8 border-[0.5px] border-brown rounded-tr-[50px]"
                 )}
