@@ -56,7 +56,7 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children, params: { lng } }) {
-  const messages = (await import(`../../i18n/locales/${lng}.json`)).default;
+  const messages = (await import(`../../i18n/locales/${lng}.js`)).default;
 
   return (
     <html lang={lng}>

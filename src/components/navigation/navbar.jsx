@@ -54,7 +54,7 @@ export default function Navbar() {
           <div
             className={cn(
               isMobileMenuOpen &&
-                "absolute w-full h-screen inset-0 backdrop-filter backdrop-blur-sm mt-[80px]"
+                "absolute w-full h-screen inset-0 bg-background bg-opacity-60 backdrop-filter backdrop-blur-sm mt-[80px]"
             )}
           >
             <div
