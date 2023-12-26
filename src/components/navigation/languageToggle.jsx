@@ -13,12 +13,16 @@ export function LanguageToggle({ currentLanguage }) {
 
   return (
     <>
-      <p className={isFrench ? "drop-shadow-active-brown font-bold" : ""}>
+      <p
+        className={
+          isFrench ? "drop-shadow-active-brown text-rust lg:text-brown" : ""
+        }
+      >
         français
       </p>
       <Link
         className={cn(
-          "relative flex w-[50px] h-[20px] border-[0.5px] border-brown rounded-[50px] items-center cursor-pointer",
+          "relative flex w-[45px] h-[18px] border-[0.5px] border-brown rounded-[50px] items-center cursor-pointer",
           "lg:w-[40px] lg:h-[15px]"
         )}
         onClick={toggleLanguage}
@@ -28,16 +32,20 @@ export function LanguageToggle({ currentLanguage }) {
       >
         <div
           className={cn(
-            "absolute left-0 right-0 bg-brown w-[13px] h-[13px] rounded-full",
+            "absolute left-0 right-0 bg-brown w-[12px] h-[12px] rounded-full",
             "lg:w-[10px] lg:h-[10px]",
             // "transition-all duration-300",
             isFrench
               ? "transform translate-x-[0.35rem]"
-              : "transform lg:translate-x-6 translate-x-[30px]"
+              : "transform lg:translate-x-6 translate-x-[28px]"
           )}
         />
       </Link>
-      <p className={!isFrench ? "drop-shadow-active-brown font-bold" : ""}>
+      <p
+        className={
+          !isFrench ? "drop-shadow-active-brown text-rust lg:text-brown" : ""
+        }
+      >
         english
       </p>
     </>

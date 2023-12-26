@@ -1,7 +1,7 @@
 const traductions = {
   nav: {
     home: "accueil",
-    about: "a propos",
+    about: "à propos",
     contact: "contact",
     cv: "curriculum vitae",
   },

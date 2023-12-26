@@ -1,4 +1,4 @@
-import { Nanum_Myeongjo, Old_Standard_TT } from "next/font/google";
+import { Old_Standard_TT, Average } from "next/font/google";
 import localFont from "next/font/local";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
@@ -36,11 +36,11 @@ const monkeg = localFont({
   variable: "--font-monkeg",
 });
 
-const nanum = Nanum_Myeongjo({
+const average = Average({
   subsets: ["latin"],
   weight: "400",
   display: "swap",
-  variable: "--font-nanum",
+  variable: "--font-average",
 });
 
 const old = Old_Standard_TT({
@@ -61,7 +61,7 @@ export default async function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng}>
       <body
-        className={`${myriad.variable} ${monkeg.variable} ${nanum.variable} ${old.variable} bg-background`}
+        className={`${myriad.variable} ${monkeg.variable} ${average.variable} ${old.variable} bg-background`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

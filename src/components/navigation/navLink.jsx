@@ -8,7 +8,11 @@ export function NavLink({ href, text, onClick }) {
   const isActive = pathname.endsWith(href);
   return (
     <Link
-      className={cn(isActive ? "drop-shadow-active" : "hover:text-rust")}
+      className={cn(
+        isActive
+          ? "drop-shadow-active text-rust lg:text-text"
+          : "hover:text-rust"
+      )}
       href={href}
       onClick={onClick}
     >

@@ -35,14 +35,17 @@ export default function Navbar() {
         {isMobile && (
           <button
             onClick={toggleMenu}
-            className="flex items-center gap-2 px-12 font-nanum text-2xl text-brown"
+            className="flex items-center gap-2 px-12 font-average text-xl text-brown"
           >
             <span>menu</span>
             <div className="mt-[4px]">
               <svg
                 width="14"
                 height="14"
-                className={!isMenuOpen && "transform rotate-180"}
+                className={cn(
+                  "opacity-80",
+                  !isMenuOpen && "transform rotate-180"
+                )}
               >
                 <polygon points="1,12.12 7,1 13,12.12" fill="#72695a" />
               </svg>
@@ -54,14 +57,14 @@ export default function Navbar() {
           <div
             className={cn(
               isMobileMenuOpen &&
-                "absolute w-full h-screen inset-0 bg-background bg-opacity-60 backdrop-filter backdrop-blur-sm mt-[80px]"
+                "absolute w-full h-dvh inset-0 bg-background bg-opacity-60 backdrop-filter backdrop-blur-sm mt-[80px]"
             )}
           >
             <div
               className={cn(
-                "flex font-nanum",
+                "flex font-average",
                 "lg:text-lg",
-                isMobile && "flex-col gap-12 mt-[120px] mx-8 text-2xl "
+                isMobile && "flex-col gap-12 mt-[80px] mx-8 text-xl "
               )}
             >
               <div
@@ -87,7 +90,7 @@ export default function Navbar() {
                   "flex gap-4 font-old text-brown items-center",
                   "lg:pr-20 lg:pl-[270px] lg:text-lg lg:justify-center lg:pt-[1.2px]",
                   isMobile &&
-                    "text-2xl py-10 px-8 border-[0.5px] border-brown rounded-tr-[50px]"
+                    "text-xl py-10 px-10 border-[0.5px] border-brown rounded-tr-[50px]"
                 )}
               >
                 <LanguageToggle currentLanguage={lng} />

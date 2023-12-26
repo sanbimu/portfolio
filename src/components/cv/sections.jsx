@@ -32,7 +32,7 @@ export default function Section({ sectionKey, section, index }) {
     >
       <div
         className={cn(
-          "flex items-center justify-between font-nanum font-bold text-xl text-brown",
+          "flex items-center justify-between font-average text-xl text-brown",
           "lg:text-lg"
         )}
       >
@@ -47,7 +47,10 @@ export default function Section({ sectionKey, section, index }) {
           <svg
             width="14"
             height="14"
-            className={!openedSection && "transform rotate-180"}
+            className={cn(
+              "opacity-80",
+              !openedSection && "transform rotate-180"
+            )}
           >
             <polygon points="1,12.12 7,1 13,12.12" fill="#72695a" />
           </svg>
@@ -55,12 +58,12 @@ export default function Section({ sectionKey, section, index }) {
       </div>
       <div
         className={cn(
-          "flex w-[88%] ml-10 border-b-[0.5px] border-brown",
-          "lg:w-[93%]"
+          "flex w-full border-b-[0.5px] border-brown",
+          "lg:w-[93%] lg:ml-10"
         )}
       ></div>
       {openedSection && (
-        <div className="w-[85%] py-2 md:py-4">
+        <div className={cn("flex flex-col gap-6 w-[full] py-8", "md:py-4")}>
           <SectionContent contents={section.values} />
         </div>
       )}
