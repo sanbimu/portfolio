@@ -40,7 +40,11 @@ export default function Section({ sectionKey, section, index }) {
 
   return (
     <div
-      className={cn("flex flex-col justify-center w-[313px]", "lg:w-[570px]")}
+      className={cn(
+        "flex flex-col justify-center w-[313px]",
+        "md:w-[470px]",
+        "lg:w-[570px]"
+      )}
     >
       <div
         className={cn(

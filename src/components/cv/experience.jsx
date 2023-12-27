@@ -30,7 +30,11 @@ export default function Experience({ contents }) {
             <ul className="flex flex-col gap-2 pl-[12px] font-myriad text-text list-disc">
               {content.tasks.map((_, i) => {
                 const tasks = `${values}.tasks.${i}`;
-                return <li key={i}>&nbsp;{t(tasks)}</li>;
+                return (
+                  <li key={i} className="pl-1">
+                    {t(tasks)}
+                  </li>
+                );
               })}
             </ul>
           </div>

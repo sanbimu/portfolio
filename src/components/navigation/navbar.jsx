@@ -21,6 +21,7 @@ export default function Navbar() {
       <div
         className={cn(
           "flex bg-background w-screen h-[80px] items-center justify-between fixed top-0 z-[100] pt-4",
+          "md:h-[100px]",
           "lg:h-[120px]"
         )}
       >
@@ -63,7 +64,8 @@ export default function Navbar() {
             <div
               className={cn(
                 "flex",
-                isMobile && "flex-col gap-12 mt-[80px] mx-8 text-xl "
+                isMobile && "flex-col gap-12 mt-[80px] mx-8 text-xl",
+                "md:mx-20"
               )}
             >
               <div
