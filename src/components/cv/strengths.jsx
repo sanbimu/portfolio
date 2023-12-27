@@ -10,7 +10,7 @@ export default function Strengths({ contents }) {
         return (
           <div
             key={i}
-            className="font-myriad text-text text-opacity-60 text-lg pl-4"
+            className="font-myriad text-text text-opacity-60 text-lg pl-4 lg:text-base"
           >
             <p>{"▸\u00A0\u00A0" + t(values)}</p>
           </div>

@@ -1,9 +1,7 @@
-import useIsMobile from "@/utils/useIsMobile";
 import { useTranslations } from "next-intl";
 
 export default function Languages({ contents }) {
   const t = useTranslations();
-  const isMobile = useIsMobile();
 
   return (
     <>
@@ -14,7 +12,7 @@ export default function Languages({ contents }) {
             key={i}
             className="flex flex-col gap-2 border-l-[0.5px] border-brown font-myriad pl-4"
           >
-            <div className="flex flex-col text-lg">
+            <div className="flex flex-col text-lg lg:text-base">
               <p className="font-semibold text-headers">
                 {t(`${values}.language`)}
               </p>

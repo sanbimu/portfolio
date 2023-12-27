@@ -40,7 +40,7 @@ export default function Section({ sectionKey, section, index }) {
 
   return (
     <div
-      className={cn("flex flex-col justify-center w-[313px]", "lg:w-[540px]")}
+      className={cn("flex flex-col justify-center w-[313px]", "lg:w-[570px]")}
     >
       <div
         className={cn(
@@ -71,12 +71,12 @@ export default function Section({ sectionKey, section, index }) {
       <div
         className={cn(
           "flex w-full border-b-[0.5px] border-brown",
-          "lg:w-[93%] lg:ml-10"
+          "lg:w-[95%] lg:ml-8"
         )}
       ></div>
       {openedSection && (
         <div
-          className={cn("flex flex-col gap-6 w-[full] pt-8 pb-4", "md:py-4")}
+          className={cn("flex flex-col gap-6 w-[full] pt-8 pb-4", "lg:ml-8")}
         >
           <SectionContent contents={section.values} />
         </div>

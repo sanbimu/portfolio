@@ -1,9 +1,8 @@
-import useIsMobile from "@/utils/useIsMobile";
+import { cn } from "@/utils/cn";
 import { useTranslations } from "next-intl";
 
 export default function Education({ contents }) {
   const t = useTranslations();
-  const isMobile = useIsMobile();
 
   return (
     <>
@@ -14,8 +13,8 @@ export default function Education({ contents }) {
             key={i}
             className="flex flex-col gap-2 border-l-[0.5px] border-brown font-myriad pl-4"
           >
-            <div className="flex flex-col text-lg">
-              <p className="font-semibold text-headers">
+            <div className={cn("flex flex-col text-lg", "lg:text-base")}>
+              <p className={cn("font-semibold text-headers", "lg:text-[17px]")}>
                 {t(`${values}.title`)}
               </p>
               <p className="font-semibold italic text-text text-opacity-60">
