@@ -15,7 +15,9 @@ export function LanguageToggle({ currentLanguage }) {
     <>
       <p
         className={
-          isFrench ? "drop-shadow-active-brown text-rust lg:text-brown" : ""
+          isFrench
+            ? "drop-shadow-active-rust text-rust lg:text-brown lg:drop-shadow-active-brown"
+            : ""
         }
       >
         français
@@ -43,7 +45,9 @@ export function LanguageToggle({ currentLanguage }) {
       </Link>
       <p
         className={
-          !isFrench ? "drop-shadow-active-brown text-rust lg:text-brown" : ""
+          !isFrench
+            ? "drop-shadow-active-rust text-rust lg:text-brown lg:drop-shadow-active-brown"
+            : ""
         }
       >
         english

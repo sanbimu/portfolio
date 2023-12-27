@@ -83,6 +83,7 @@ const translations = {
       },
       education: {
         title: "Education",
+        graduated: "Graduated in",
         values: [
           {
             title: "Master of Science in Sociology",
@@ -116,7 +117,20 @@ const translations = {
       },
       languages: {
         title: "Languages",
-        values: ["French", "English", "Dutch"],
+        values: [
+          {
+            language: "French",
+            level: "Native proficiency",
+          },
+          {
+            language: "English",
+            level: "Full professional proficiency",
+          },
+          {
+            language: "Dutch",
+            level: "Native proficiency",
+          },
+        ],
       },
       strengths: {
         title: "Strengths",

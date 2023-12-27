@@ -1,12 +1,12 @@
 import { useTranslations } from "next-intl";
 
-export default function Skills({ contents }) {
+export default function Strengths({ contents }) {
   const t = useTranslations();
 
   return (
     <div className="flex flex-col gap-2 border-l-[0.5px] border-brown ">
       {contents.map((content, i) => {
-        const values = `cv.section.skills.values.${i}`;
+        const values = `cv.section.strengths.values.${i}`;
         return (
           <div
             key={i}

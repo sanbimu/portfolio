@@ -62,8 +62,7 @@ export default function Navbar() {
           >
             <div
               className={cn(
-                "flex font-average",
-                "lg:text-lg",
+                "flex",
                 isMobile && "flex-col gap-12 mt-[80px] mx-8 text-xl "
               )}
             >

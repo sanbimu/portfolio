@@ -61,7 +61,7 @@ export default async function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng}>
       <body
-        className={`${myriad.variable} ${monkeg.variable} ${average.variable} ${old.variable} bg-background`}
+        className={`${myriad.variable} ${monkeg.variable} ${average.variable} ${old.variable} bg-background text-text`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

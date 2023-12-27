@@ -9,8 +9,10 @@ export function NavLink({ href, text, onClick }) {
   return (
     <Link
       className={cn(
+        "font-average text-text",
+        "lg:text-lg",
         isActive
-          ? "drop-shadow-active text-rust lg:text-text"
+          ? "drop-shadow-active-rust text-rust lg:text-text lg:drop-shadow-active"
           : "hover:text-rust"
       )}
       href={href}

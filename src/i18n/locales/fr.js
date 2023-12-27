@@ -83,6 +83,7 @@ const traductions = {
       },
       education: {
         title: "Formation",
+        graduated: "Diplômée en",
         values: [
           {
             title: "Master en Sociologie",
@@ -116,7 +117,20 @@ const traductions = {
       },
       languages: {
         title: "Langues",
-        values: ["français", "anglais", "néerlandais"],
+        values: [
+          {
+            language: "Français",
+            level: "Langue maternelle",
+          },
+          {
+            language: "Néerlandais",
+            level: "Langue maternelle",
+          },
+          {
+            language: "Anglais",
+            level: "Capacité professionnelle complète",
+          },
+        ],
       },
       strengths: {
         title: "Atouts",

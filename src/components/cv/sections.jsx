@@ -4,6 +4,10 @@ import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import Experience from "./experience";
 import Skills from "./skills";
+import Education from "./education";
+import Languages from "./languages";
+import Strengths from "./strengths";
+import Interests from "./interests";
 
 export default function Section({ sectionKey, section, index }) {
   const t = useTranslations();
@@ -21,8 +25,16 @@ export default function Section({ sectionKey, section, index }) {
     switch (sectionKey) {
       case "experience":
         return Experience;
+      case "education":
+        return Education;
       case "skills":
         return Skills;
+      case "languages":
+        return Languages;
+      case "strengths":
+        return Strengths;
+      case "interests":
+        return Interests;
     }
   }, [sectionKey]);
 
@@ -63,7 +75,9 @@ export default function Section({ sectionKey, section, index }) {
         )}
       ></div>
       {openedSection && (
-        <div className={cn("flex flex-col gap-6 w-[full] py-8", "md:py-4")}>
+        <div
+          className={cn("flex flex-col gap-6 w-[full] pt-8 pb-4", "md:py-4")}
+        >
           <SectionContent contents={section.values} />
         </div>
       )}
