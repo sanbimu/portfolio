@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="859.7666"
+   height="887.33478"
+   viewBox="0 0 859.7666 887.33478"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-515.48853,-55.96701)">
+    <circle
+       style="fill:none;stroke:#72695a;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:0.5"
+       id="path2"
+       cx="927.23914"
+       cy="531.55115"
+       r="411.50061" />
+    <ellipse
+       style="fill:none;stroke:#72695a;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:0.5"
+       id="path2-5"
+       cx="997.96271"
+       cy="433.25943"
+       rx="377.04245"
+       ry="377.04242" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;fill:#72695a;fill-opacity:0.6;stroke:none;stroke-width:0.987316;stroke-dasharray:none;stroke-opacity:0.5"
+       x="772.55048"
+       y="495.39209"
+       id="text2"
+       transform="scale(1.0102889,0.98981588)"><tspan
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:Monkeg;-inkscape-font-specification:'Monkeg, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#72695a;fill-opacity:0.6;stroke:none;stroke-width:0.987316"
+         x="772.55048"
+         y="495.39209">curriculum vitae </tspan></text>
+  </g>
+</svg>
