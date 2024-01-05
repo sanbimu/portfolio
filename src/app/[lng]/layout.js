@@ -43,13 +43,6 @@ const average = Average({
   variable: "--font-average",
 });
 
-const old = Old_Standard_TT({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-  variable: "--font-old",
-});
-
 export const metadata = {
   title: "Sanbimu",
   description: "Sanbimu's homepage",
@@ -61,7 +54,7 @@ export default async function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng}>
       <body
-        className={`${myriad.variable} ${monkeg.variable} ${average.variable} ${old.variable} bg-background text-text`}
+        className={`${myriad.variable} ${monkeg.variable} ${average.variable} bg-background text-text`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

@@ -88,7 +88,7 @@ export default function Navbar() {
               </div>
               <div
                 className={cn(
-                  "flex gap-4 font-old text-brown items-center",
+                  "flex gap-4 font-average text-brown items-center",
                   "lg:pr-20 lg:pl-[270px] lg:text-lg lg:justify-center lg:pt-[1.2px]",
                   isMobile &&
                     "text-xl py-10 px-10 border-[0.5px] border-brown rounded-tr-[50px]"

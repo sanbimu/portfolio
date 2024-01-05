@@ -17,7 +17,6 @@ module.exports = {
     extend: {
       fontFamily: {
         average: ["var(--font-average)"],
-        old: ["var(--font-old)"],
         myriad: ["var(--font-myriad)"],
         monkeg: ["var(--font-monkeg)"],
       },
