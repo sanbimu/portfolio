@@ -1,4 +1,4 @@
-import { Old_Standard_TT, Average } from "next/font/google";
+import { Average } from "next/font/google";
 import localFont from "next/font/local";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";

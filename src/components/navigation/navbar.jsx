@@ -27,7 +27,7 @@ export default function Navbar() {
         <div
           className={cn(
             "flex px-12 font-monkeg text-4xl text-brown",
-            "lg:px-20 lg:text-5xl"
+            "lg:text-5xl"
           )}
         >
           N
@@ -55,8 +55,8 @@ export default function Navbar() {
         {!isMobile && (
           <div
             className={cn(
-              "flex gap-4 font-average text-brown items-center",
-              "lg:px-12 lg:text-lg lg:justify-center lg:pt-[1.2px]",
+              "flex gap-4 font-average text-brown items-center px-12",
+              "lg:text-lg lg:justify-center lg:pt-[1.2px]",
               isMobile &&
                 "text-xl py-10 px-10 border-[0.5px] border-brown rounded-tr-[50px]"
             )}
