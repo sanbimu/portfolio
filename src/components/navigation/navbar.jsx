@@ -21,8 +21,7 @@ export default function Navbar() {
       <div
         className={cn(
           "flex bg-background w-screen h-[80px] items-center justify-between fixed top-0 z-[100] pt-4",
-          "md:h-[100px]",
-          "lg:h-[120px]"
+          "md:h-[100px]"
         )}
       >
         <div
@@ -33,73 +32,85 @@ export default function Navbar() {
         >
           N
         </div>
-        {isMobile && (
-          <button
-            onClick={toggleMenu}
-            className="flex items-center gap-2 px-12 font-average text-xl text-brown"
-          >
-            <span>menu</span>
-            <div className="mt-[4px]">
-              <svg
-                width="14"
-                height="14"
-                className={cn(
-                  "opacity-80",
-                  !isMenuOpen && "transform rotate-180"
-                )}
-              >
-                <polygon points="1,12.12 7,1 13,12.12" fill="#72695a" />
-              </svg>
-            </div>
-          </button>
-        )}
 
-        {(!isMobile || isMobileMenuOpen) && (
-          <div
-            className={cn(
-              isMobileMenuOpen &&
-                "absolute w-full h-dvh inset-0 bg-background bg-opacity-60 backdrop-filter backdrop-blur-sm mt-[80px]"
-            )}
-          >
-            <div
+        <button
+          onClick={toggleMenu}
+          className="flex items-center gap-2 px-12 font-average text-xl text-brown md:text-lg"
+        >
+          <span>menu</span>
+          <div className="mt-[4px] lg:mt-[3px]">
+            <svg
+              width="14"
+              height="14"
               className={cn(
-                "flex",
-                isMobile && "flex-col gap-12 mt-[80px] mx-8 text-xl",
-                "md:mx-20"
+                "opacity-80 lg:scale-[85%]",
+                !isMenuOpen && "transform rotate-180"
               )}
             >
-              <div
-                className={cn(
-                  "flex lg:gap-16",
-                  isMobile &&
-                    "flex-col gap-6 p-8 border-[0.5px] border-brown rounded-bl-[50px]"
-                )}
-              >
-                {navLinks.map((link, index) => {
-                  return (
-                    <NavLink
-                      href={link.path}
-                      key={index}
-                      text={t("nav." + link.key)}
-                      onClick={toggleMenu}
-                    />
-                  );
-                })}
-              </div>
-              <div
-                className={cn(
-                  "flex gap-4 font-average text-brown items-center",
-                  "lg:pr-20 lg:pl-[270px] lg:text-lg lg:justify-center lg:pt-[1.2px]",
-                  isMobile &&
-                    "text-xl py-10 px-10 border-[0.5px] border-brown rounded-tr-[50px]"
-                )}
-              >
-                <LanguageToggle currentLanguage={lng} />
-              </div>
-            </div>
+              <polygon points="1,12.12 7,1 13,12.12" fill="#72695a" />
+            </svg>
+          </div>
+        </button>
+
+        {!isMobile && (
+          <div
+            className={cn(
+              "flex gap-4 font-average text-brown items-center",
+              "lg:px-12 lg:text-lg lg:justify-center lg:pt-[1.2px]",
+              isMobile &&
+                "text-xl py-10 px-10 border-[0.5px] border-brown rounded-tr-[50px]"
+            )}
+          >
+            <LanguageToggle currentLanguage={lng} />
           </div>
         )}
       </div>
     </>
   );
 }
+
+// {(!isMobile || isMobileMenuOpen) && (
+//   <div
+//     className={cn(
+//       isMobileMenuOpen &&
+//         "absolute w-full h-dvh inset-0 bg-background bg-opacity-60 backdrop-filter backdrop-blur-sm mt-[80px]"
+//     )}
+//   >
+//     <div
+//       className={cn(
+//         "flex",
+//         isMobile && "flex-col gap-12 mt-[80px] mx-8 text-xl",
+//         "md:mx-20"
+//       )}
+//     >
+//       <div
+//         className={cn(
+//           "flex lg:gap-16",
+//           isMobile &&
+//             "flex-col gap-6 p-8 border-[0.5px] border-brown rounded-bl-[50px]"
+//         )}
+//       >
+//         {navLinks.map((link, index) => {
+//           return (
+//             <NavLink
+//               href={link.path}
+//               key={index}
+//               text={t("nav." + link.key)}
+//               onClick={toggleMenu}
+//             />
+//           );
+//         })}
+//       </div>
+//       <div
+//         className={cn(
+//           "flex gap-4 font-average text-brown items-center",
+//           "lg:pr-20 lg:pl-[270px] lg:text-lg lg:justify-center lg:pt-[1.2px]",
+//           isMobile &&
+//             "text-xl py-10 px-10 border-[0.5px] border-brown rounded-tr-[50px]"
+//         )}
+//       >
+//         <LanguageToggle currentLanguage={lng} />
+//       </div>
+//     </div>
+//   </div>
+// )}

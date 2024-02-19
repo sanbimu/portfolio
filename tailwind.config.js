@@ -22,8 +22,8 @@ module.exports = {
       },
       dropShadow: {
         active: "0 0.5px 0px rgb(30, 30, 30)",
-        "active-brown": "0 1px 0px rgb(114, 105, 90)",
-        "active-rust": "0 1px 0px rgb(154, 81, 28)",
+        "active-brown": "0 0.5px 0px rgb(114, 105, 90)",
+        "active-rust": "0 0.5px 0px rgb(154, 81, 28)",
       },
     },
   },
