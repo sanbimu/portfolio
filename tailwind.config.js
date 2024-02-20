@@ -25,6 +25,10 @@ module.exports = {
         "active-brown": "0 0.5px 0px rgb(114, 105, 90)",
         "active-rust": "0 0.5px 0px rgb(154, 81, 28)",
       },
+      screens: {
+        xl: "1600px",
+        "2xl": "1800px",
+      },
     },
   },
   plugins: [],

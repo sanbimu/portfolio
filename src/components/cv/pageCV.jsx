@@ -1,12 +1,12 @@
 import { cn } from "@/utils/cn";
 import translations from "@/i18n/locales/en";
 import Section from "@/components/cv/sections";
-import BackgroundCV from "@/components/cv/backgroundCV";
 import Image from "next/image";
+import BackgroundCV from "./backgroundCV";
 
 export default function PageCV() {
   return (
-    <div className="flex h-dvh w-screen">
+    <div className="flex relative h-dvh w-screen">
       <div
         className={cn(
           "flex flex-col pt-[120px] z-50 mx-auto",
@@ -19,7 +19,7 @@ export default function PageCV() {
             "lg:order-1 lg:pt-[100px]"
           )}
         >
-          <div className="flex flex-col gap-6 lg:gap-10 lg:pl-24 lg:pt-[62px]">
+          <div className="flex flex-col gap-6 lg:gap-10 lg:pl-24 xl:pl-48 lg:pt-[62px]">
             <p className="font-monkeg text-3xl text-headers text-opacity-60 lg:text-[40px]">
               &nbsp;curriculum vitae&nbsp;
             </p>
@@ -34,10 +34,10 @@ export default function PageCV() {
               <Image
                 src="/photos/meCV.jpg"
                 alt="me"
-                height={250}
-                width={163}
+                height={2048}
+                width={1365}
                 className={cn(
-                  "rounded-[50px] border border-rust p-1",
+                  "rounded-[50px] border border-rust p-1 h-[250px] w-[163px]",
                   " lg:rounded-[80px] lg:h-[344px] lg:w-[225px]"
                 )}
               />
@@ -74,6 +74,7 @@ export default function PageCV() {
           </div>
         </div>
       </div>
+      <BackgroundCV />
     </div>
   );
 }
